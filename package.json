@@ -3,21 +3,19 @@
   "version": "1.0.0",
 
   "types": {
-    "SpecialBarViz": {
-      "base": "pentaho/visual/base/visualization",
-      "alias": "superSpecialBar",
-
+    "BarVisualization": {
+      "base": "pentaho/visual/base/Visualization",
       // "isAbstract": false, // default
+      "alias": "myBar",
 
       // Applicable to browsing info, and also to the component itself.
-      //"styleClass": "my-package-special-bar-viz", // default
+      //"styleClass": "my-package-bar-visualization", // default
 
       // Forward declaration of browsing information.
-
-      //"isBrowsable": true, // default; usually better by configuration
       "browse": {
-        "i18n": true,  // ["./i18n/SpecialBarViz.browse"]
-        "styles": true // ["./theme/SpecialBarViz.browse.css"]
+        "enabled": true, // default is false; configurable
+        "i18n": true,    // ["./i18n/BarVisualization.browse"]; configurable
+        "styles": true   // ["./theme/BarVisualization.browse.css"]; configurable
 
         // Provide defaults.
         // Better provided by configuration.
@@ -26,10 +24,16 @@
 
         // Can provide i18n defaults. Not advisable.
         // Better provided in associated i18n file.
-        //"label": "Special Bar",
-        //"description": "Bar chart that is super special",
-        //"helpUrl": "//www.docs.io/my/package/SpecialBarViz"
+        // Can also be _configured_, using the "i18n" property.
+        //"label": "My Bar",
+        //"description": "My Bar chart",
+        //"helpUrl": "//www.docs.io/my/package/BarVisualization"
       }
+    }
+  },
+  "instances": {
+    "config": {
+      "type": "pentaho/config/spec/IRuleSet"
     }
   }
 }

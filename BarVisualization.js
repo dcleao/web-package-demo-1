@@ -1,18 +1,19 @@
 define([
   "module",
   "pentaho/visual/base/Visualization",
-  "./SpecialBarModel",
-], function(module, BaseViz, SpecialBarModel) {
+  "./BarModel",
+  "pentaho/css!./theme/BarVisualization"
+], function(module, BaseViz, BarModel) {
 
   return BaseViz.extend({
     $type: {
       id: module.id,
 
-      defaultViewTypeId: "./SpecialBarView",
+      defaultViewTypeId: "./BarView",
 
       props: {
         model: {
-          valueType: SpecialBarModel
+          valueType: BarModel
         }
       }
     }

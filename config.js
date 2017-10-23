@@ -3,24 +3,24 @@ define({
     {
       priority: 10,
       select: {
-        type: "@pentaho/browse!my/package/SpecialBarViz",
+        type: "@pentaho/browse!my/package/BarVisualization",
         application: "pentaho-analyzer"
       },
       apply: {
-        isBrowsable: true,
+        enabled: true,
         category: "bar",
-        ordinal: 10,
+        ordinal: 10
       }
     },
 
     {
       priority: 10,
       select: {
-        type: "@pentaho/browse!my/package/SpecialBarViz",
+        type: "@pentaho/browse!my/package/BarVisualization",
         application: "pentaho-det"
       },
       apply: {
-        isBrowsable: false
+        enabled: false
       }
     }
   ]

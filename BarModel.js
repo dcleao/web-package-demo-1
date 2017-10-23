@@ -1,8 +1,7 @@
 define([
   "module",
   "pentaho/visual/base/Model",
-  "pentaho/i18n!./i18n/SpecialBaseModel",
-  "pentaho/css!./theme/SpecialBaseModel"
+  "pentaho/i18n!./i18n/BarModel"
 ], function(module, BaseModel, bundle) {
 
   return BaseModel.extend({

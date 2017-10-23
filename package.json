@@ -1,0 +1,35 @@
+{
+  "name": "my/package",
+  "version": "1.0.0",
+
+  "types": {
+    "SpecialBarViz": {
+      "base": "pentaho/visual/base/visualization",
+      "alias": "superSpecialBar",
+
+      // "isAbstract": false, // default
+
+      // Applicable to browsing info, and also to the component itself.
+      //"styleClass": "my-package-special-bar-viz", // default
+
+      // Forward declaration of browsing information.
+
+      //"isBrowsable": true, // default; usually better by configuration
+      "browse": {
+        "i18n": true,  // ["./i18n/SpecialBarViz.browse"]
+        "styles": true // ["./theme/SpecialBarViz.browse.css"]
+
+        // Provide defaults.
+        // Better provided by configuration.
+        //"category": "bar",
+        //"ordinal": 10,
+
+        // Can provide i18n defaults. Not advisable.
+        // Better provided in associated i18n file.
+        //"label": "Special Bar",
+        //"description": "Bar chart that is super special",
+        //"helpUrl": "//www.docs.io/my/package/SpecialBarViz"
+      }
+    }
+  }
+}

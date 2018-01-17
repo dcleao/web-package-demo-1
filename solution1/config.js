@@ -3,7 +3,7 @@ define({
     {
       priority: 10,
       select: {
-        type: "@pentaho/browse!my/package/BarVisualization",
+        type: "@pentaho/browse!@pentaho/visual/BarVisualization",
         application: "pentaho-analyzer"
       },
       apply: {

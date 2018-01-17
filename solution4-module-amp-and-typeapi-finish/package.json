@@ -1,0 +1,16 @@
+{
+  "name": "@my/bar",
+  "version": "1.0.0",
+  "modules": {
+    // Auto-binds to `Viz` as its browsing info module.
+    "Viz.browse": {
+      "type": "pentaho/module/spec/IBrowsingInfo"
+    },
+    "Viz": {
+      "base": "pentaho/visual/base/Viz"
+    },
+    "config": {
+      "type": "pentaho/config/spec/IRuleSet"
+    }
+  }
+}

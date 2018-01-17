@@ -1,0 +1,13 @@
+{
+  "name": "@my/bar",
+  "version": "1.0.0",
+  "modules": {
+    "Viz": {
+      "base": "pentaho/visual/base/Viz",
+      "browse": true
+    },
+    "config": {
+      "type": "pentaho/config/spec/IRuleSet"
+    }
+  }
+}

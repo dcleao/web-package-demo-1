@@ -1,0 +1,8 @@
+
+.my-bar-Viz-browse.component-icon-small {
+  background-image: url("./images/icon-small.png");
+}
+
+.my-bar-Viz-browse.component-icon-placeholder {
+  background-image: url("./images/icon-placeholder.png");
+}

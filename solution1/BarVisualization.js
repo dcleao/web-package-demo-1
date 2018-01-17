@@ -10,12 +10,30 @@ define([
       id: module.id,
 
       defaultViewTypeId: "./BarView",
+      modelTypeId: "./BarModel",
 
+      /* base */
       props: {
         model: {
           valueType: BarModel
+        },
+        view: {
+          valueType: "base.View"
         }
       }
     }
   });
+  /*
+    {
+      _: "BarViz",
+      model: {
+        //_: "BarModel",
+        lineWidth: 0
+      },
+      view: {
+        _: "BarView"
+        // model: x
+      }
+    }
+   */
 });

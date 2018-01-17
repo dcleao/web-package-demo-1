@@ -1,0 +1,34 @@
+{
+  "name": "@my/bar",
+  "version": "1.0.0",
+  "modules": {
+    // Example Type API type declaration
+    "pentaho/type/Instance": {
+      // "kind": "type",                  // implied by use of "base"
+      "class": "pentaho/type/TypeModule", // specific module class to use
+      "base": null                        // root type
+    },
+
+    // Auto-binds to `Viz` as its browsing info module.
+    "Viz.browse": {
+      "type": "pentaho/module/spec/IBrowsingInfo",
+      "i18n": true,
+      "theme": true
+    },
+    "Viz": {
+      "base": "pentaho/visual/base/Viz"
+    },
+    "Model": {
+      "base": "pentaho/visual/base/Model",
+      "i18n": true
+    },
+    "View": {
+      "base": "pentaho/visual/base/View",
+      "i18n": true,
+      "theme": true
+    },
+    "config": {
+      "type": "pentaho/config/spec/IRuleSet"
+    }
+  }
+}

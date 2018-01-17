@@ -1,0 +1,13 @@
+{
+  "name": "my/package",
+  "version": "1.0.0",
+
+  "types": {
+    "BarVisualization": {"base": "pentaho/visual/base/Visualization"}
+  },
+  "instances": {
+    "config": {
+      "type": "pentaho/config/spec/IRuleSet"
+    }
+  }
+}

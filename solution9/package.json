@@ -1,0 +1,25 @@
+{
+  "name": "@my/bar",
+  "version": "1.0.0",
+  "config": {
+    "pentaho/modules": {
+      
+      "@my/bar/Model": {
+        "base": "pentaho/visual/base/Model",
+        "i18n": true,
+        "ui": "@my/bar/Model.ui" // <=> true
+      },
+
+      "@my/bar/View": {
+        "base": "pentaho/visual/base/IView",
+        "props": {
+          "model": {"valueType": "@my/base/Model"}
+        }
+      },
+
+      "@my/bar/config": {
+        "type": "pentaho/config/spec/IRuleSet"
+      }
+    }
+  }
+}

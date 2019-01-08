@@ -1,7 +1,7 @@
 define([
   "pentaho/module!_",
   "pentaho/visual/base/View",
-  "pentaho/theme!_" // Automatically apply any themes configuration annotated themes for this module.
+  "pentaho/theme!_" // Apply any configuration annotated themes for this module, when loaded.
 ], function(module, BaseView) {
 
   return BaseView.extend({

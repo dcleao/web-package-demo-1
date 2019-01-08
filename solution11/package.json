@@ -1,0 +1,51 @@
+{
+  "name": "@my/bar",
+  "version": "1.0.0",
+  "config": {
+    "@hitachivantara/pentaho/modules": {
+      
+      "@my/bar/Model": {
+        "base": "@hitachivantara/pentaho/visual/base/Model",
+        "info": true,
+        "i18n": true,
+        "config": {
+          "::annotations": {
+            "@hitachivantara/pentaho/visual/DefaultView": "./View"
+          }
+        }
+      },
+
+      // Declare a leaf, info/browsable viz model.
+      "@my/bar/View": {
+        "i18n": true,
+        "config": {
+          "::annotations": {
+            "@hitachivantara/pentaho/theme/Theme": {
+              "default": {},
+              "style": "default",
+              "main": "./themes/ruby/View"
+            }
+          }
+        }
+      },
+
+      "@my/bar/Model.info": {
+        // "type": "@hitachivantara/pentaho/spec/IUIInfo",
+        "i18n": true,
+        // When value is unspecified, it would be = merge(baseValue, i18n, config)
+        "baseValue": {
+          "category": "bar",
+          // "isAdvanced": false,
+        },
+        "config": {
+          // "isBrowsable": true, 
+          "::annotations": {
+            "@hitachivantara/pentaho/theme/Theme": {
+              "main": "./themes/ruby/Model"
+            }
+          }
+        }
+      }
+    }
+  }
+}

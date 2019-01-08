@@ -1,20 +1,23 @@
 {
   "name": "@my/bar",
   "version": "1.0.0",
-  "map": {
-    "@pentaho": "@hitachivantara/pentaho-core",
-    "@pentaho-visual": "@hitachivantara/pentaho-visual"
+  "dependencies": {
+    // Exports "@pentaho"
+    "@hitachivantara/pentaho-core": "1.0.0",
+    
+    // Exports "@pentaho/visual"
+    "@hitachivantara/pentaho-visual": "1.0.0"
   },
   "config": {
     "@pentaho/modules": {
       
       "@my/bar/Model": {
-        "base": "@pentaho-visual/base/Model",
+        "base": "@pentaho/visual/base/Model",
         "info": true,
         "i18n": true,
         "config": {
           "::annotations": {
-            "@pentaho-visual/DefaultView": "./View"
+            "@pentaho/visual/DefaultView": "./View"
             // @angular
             // @react
           }
@@ -23,7 +26,7 @@
 
       "@my/bar/View": {
         // No real need to specify base.
-        // "base": "@pentaho-visual/IView"
+        // "base": "@pentaho/visual/IView"
 
         "i18n": true,
         "config": {

@@ -4,7 +4,7 @@ define({
     {
       select: {
         module: "./Model.info",
-        application: "@hitachivantara/pentaho-det"
+        application: "@pentaho/det"
       },
       apply: {
         isBrowsable: true,
@@ -36,7 +36,7 @@ define({
     {
       select: {
         module: "./Model",
-        application: "@hitachivantara/pentaho-analyzer"
+        application: "@pentaho/analyzer"
       },
       apply: {
         props: {

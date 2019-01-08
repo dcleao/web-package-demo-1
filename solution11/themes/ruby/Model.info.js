@@ -1,5 +1,5 @@
 define([
-  "pentaho/css!./Model.info"
+  "@pentaho/css!./Model.info"
 ], function() {
 
 });

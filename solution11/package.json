@@ -16,7 +16,9 @@
       },
 
       "@my/bar/View": {
-        // No need for base, really.
+        // No real need to specify base.
+        // "base": "@hitachivantara/pentaho/visual/IView"
+
         "i18n": true,
         "config": {
           "::annotations": {
@@ -26,6 +28,7 @@
       },
 
       "@my/bar/Model.info": {
+        // No real need to specify type.
         // "type": "@hitachivantara/pentaho/spec/IUIInfo",
 
         "i18n": true,

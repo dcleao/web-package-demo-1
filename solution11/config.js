@@ -21,7 +21,7 @@ define({
       },
       apply: {
         "::annotations": {
-          "@hitachivantara/pentaho/theme/Themed": {
+          "@pentaho/theme/Themed": {
             // Defaults to first in themes object.
             // "default": "crystal",
 

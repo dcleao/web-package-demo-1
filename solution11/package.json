@@ -1,47 +1,53 @@
 {
   "name": "@my/bar",
   "version": "1.0.0",
+  "map": {
+    "@pentaho": "@hitachivantara/pentaho-core",
+    "@pentaho-visual": "@hitachivantara/pentaho-visual"
+  },
   "config": {
-    "@hitachivantara/pentaho/modules": {
+    "@pentaho/modules": {
       
       "@my/bar/Model": {
-        "base": "@hitachivantara/pentaho/visual/base/Model",
+        "base": "@pentaho-visual/base/Model",
         "info": true,
         "i18n": true,
         "config": {
           "::annotations": {
-            "@hitachivantara/pentaho/visual/DefaultView": "./View"
+            "@pentaho-visual/DefaultView": "./View"
+            // @angular
+            // @react
           }
         }
       },
 
       "@my/bar/View": {
         // No real need to specify base.
-        // "base": "@hitachivantara/pentaho/visual/IView"
+        // "base": "@pentaho-visual/IView"
 
         "i18n": true,
         "config": {
           "::annotations": {
-            "@hitachivantara/pentaho/theme/Themed": {"themes": {"ruby": true}}
+            "@pentaho/theme/Themed": {"themes": {"ruby": true}}
           }
         }
       },
 
       "@my/bar/Model.info": {
         // No real need to specify type.
-        // "type": "@hitachivantara/pentaho/spec/IUIInfo",
+        // "type": "@pentaho/spec/IUIInfo",
 
         "i18n": true,
         
         // When value is unspecified, it would be = merge(baseValue, i18n, config)
-        "baseValue": {
+        "value": {
           "category": "bar",
           // "isAdvanced": false,
         },
         "config": {
           // "isBrowsable": true, 
           "::annotations": {
-            "@hitachivantara/pentaho/theme/Themed": {"themes": {"ruby": true}}
+            "@pentaho/theme/Themed": {"themes": {"ruby": true}}
           }
         }
       }

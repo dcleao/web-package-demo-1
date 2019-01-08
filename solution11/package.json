@@ -15,23 +15,21 @@
         }
       },
 
-      // Declare a leaf, info/browsable viz model.
       "@my/bar/View": {
+        // No need for base, really.
         "i18n": true,
         "config": {
           "::annotations": {
-            "@hitachivantara/pentaho/theme/Theme": {
-              "default": {},
-              "style": "default",
-              "main": "./themes/ruby/View"
-            }
+            "@hitachivantara/pentaho/theme/Themed": {"themes": {"ruby": true}}
           }
         }
       },
 
       "@my/bar/Model.info": {
         // "type": "@hitachivantara/pentaho/spec/IUIInfo",
+
         "i18n": true,
+        
         // When value is unspecified, it would be = merge(baseValue, i18n, config)
         "baseValue": {
           "category": "bar",
@@ -40,9 +38,7 @@
         "config": {
           // "isBrowsable": true, 
           "::annotations": {
-            "@hitachivantara/pentaho/theme/Theme": {
-              "main": "./themes/ruby/Model"
-            }
+            "@hitachivantara/pentaho/theme/Themed": {"themes": {"ruby": true}}
           }
         }
       }

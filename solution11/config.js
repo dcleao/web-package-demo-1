@@ -14,15 +14,19 @@ define({
     },
 
     // Model.info themes configuration
+    // For adding new themes or changing the default theme.
     {
       select: {
-        module: "./Model.info",
-        theme: "crystal"
+        module: "./Model.info"
       },
       apply: {
         "::annotations": {
-          "@hitachivantara/pentaho/theme/Theme": {
-            main: "./themes/crystal/Model.info"
+          "@hitachivantara/pentaho/theme/Themed": {
+            // Defaults to first in themes object.
+            // "default": "crystal",
+
+            // Add crystal and saphire themes:
+            "themes": {"crystal": true, "saphire": true}
           }
         }
       }
@@ -40,21 +44,6 @@ define({
         },
         application: {
           keepLevelOnDrilldown: false
-        }
-      }
-    },
-
-    // View - themes
-    {
-      select: {
-        module: "./View",
-        theme: "crystal"
-      },
-      apply: {
-        "::annotations": {
-          "@hitachivantara/pentaho/theme/Theme": {
-            main: "./themes/crystal/View"
-          }
         }
       }
     },

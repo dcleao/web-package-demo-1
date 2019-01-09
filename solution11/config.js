@@ -4,7 +4,7 @@ define({
     {
       select: {
         module: "./Model.info",
-        application: "@pentaho/det"
+        application: "pentaho/det"
       },
       apply: {
         isBrowsable: true,
@@ -21,7 +21,7 @@ define({
       },
       apply: {
         "::annotations": {
-          "@pentaho/theme/Themed": {
+          "pentaho/theme/Themed": {
             // Defaults to first in themes object.
             // "default": "crystal",
 
@@ -36,7 +36,7 @@ define({
     {
       select: {
         module: "./Model",
-        application: "@pentaho/analyzer"
+        application: "pentaho/analyzer"
       },
       apply: {
         props: {

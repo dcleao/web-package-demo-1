@@ -1,7 +1,7 @@
 define([
-  "@pentaho/module!_",
-  "@pentaho/visual/base/Model",
-  "@pentaho/visual/role/Property",
+  "pentaho/module!_",
+  "pentaho/visual/base/Model",
+  "pentaho/visual/role/Property",
 ], function(module, BaseModel, RoleProperty) {
   
   return BaseModel.extend({

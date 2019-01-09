@@ -2,43 +2,44 @@
   "name": "@my/bar",
   "version": "1.0.0",
   "dependencies": {
-    // Exports "@pentaho"
+    // Exports "pentaho"
     "@hitachivantara/pentaho-core": "1.0.0",
     
-    // Exports "@pentaho/visual"
+    // Exports "pentaho/visual"
     "@hitachivantara/pentaho-visual": "1.0.0"
   },
+  "paths": {
+    "my/bar": "/"
+  },
   "config": {
-    "@pentaho/modules": {
+    "pentaho/modules": {
       
-      "@my/bar/Model": {
-        "base": "@pentaho/visual/base/Model",
+      "my/bar/Model": {
+        "base": "pentaho/visual/base/Model",
         "info": true,
         "i18n": true,
         "config": {
           "::annotations": {
-            "@pentaho/visual/DefaultView": "./View"
-            // @angular
-            // @react
+            "pentaho/visual/DefaultView": "./View"
           }
         }
       },
 
-      "@my/bar/View": {
+      "my/bar/View": {
         // No real need to specify base.
-        // "base": "@pentaho/visual/IView"
+        // "base": "pentaho/visual/IView"
 
         "i18n": true,
         "config": {
           "::annotations": {
-            "@pentaho/theme/Themed": {"themes": {"ruby": true}}
+            "pentaho/theme/Themed": {"themes": {"ruby": true}}
           }
         }
       },
 
-      "@my/bar/Model.info": {
+      "my/bar/Model.info": {
         // No real need to specify type.
-        // "type": "@pentaho/spec/IUIInfo",
+        // "type": "pentaho/spec/IUIInfo",
 
         "i18n": true,
         
@@ -50,7 +51,7 @@
         "config": {
           // "isBrowsable": true, 
           "::annotations": {
-            "@pentaho/theme/Themed": {"themes": {"ruby": true}}
+            "pentaho/theme/Themed": {"themes": {"ruby": true}}
           }
         }
       }

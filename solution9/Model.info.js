@@ -1,5 +1,5 @@
 define({
-  name: "foo",
+  label: "foo",
   description: "bar",
   category: "basic",
   ordinal: 10
@@ -7,7 +7,7 @@ define({
 
 define(function() {
   return {
-    name: "foo",
+    label: "foo",
     description: "bar",
     category: "basic",
     ordinal: 10
@@ -19,7 +19,7 @@ define([
   "pentaho/i18n!_"
 ], function(_, bundle) {
   return _.merge({
-    name: "foo",
+    label: "foo",
     description: "bar",
     category: "basic",
     ordinal: 10
@@ -32,7 +32,7 @@ define([
   "pentaho/theme!_"
 ], function(_, bundle) {
   return _.merge({
-    name: "foo",
+    label: "foo",
     description: "bar",
     category: "basic",
     ordinal: 10
@@ -44,7 +44,7 @@ define([
   "lodash"
 ], function(module, _) {
   return _.merge({
-    name: "foo",
+    label: "foo",
     description: "bar",
     category: "basic",
     ordinal: 10,
@@ -61,27 +61,3 @@ define([
 
   return UIMeta.fromModule(module, {category: "bar"}, bundle.structured);
 });
-
-interface IModuleMeta {
-  // ...
-  loadUIAsync() : IPromise.<IUIMeta>
-  get ui() : ?IUIMeta
-  get isUILoaded() : boolean
-}
-
-// module.ui
-
-interface IUIMeta {
-  get isBrowsable() : boolean
-
-  get label()       : string
-  get description() : string
-  
-  get category()   : string
-  get ordinal()    : number
-  get isAdvanced() : boolean
-  
-  get helpUrl()    : string
-
-  get styleClass() : string
-}

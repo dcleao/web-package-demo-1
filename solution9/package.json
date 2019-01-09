@@ -1,24 +1,34 @@
 {
   "name": "@my/bar",
   "version": "1.0.0",
+  "dependencies": {
+    // Exports "pentaho"
+    "@hitachivantara/pentaho-core": "1.0.0",
+    
+    // Exports "pentaho/visual"
+    "@hitachivantara/pentaho-visual": "1.0.0"
+  },
+  "paths": {
+    "my/bar": "/"
+  },
   "config": {
     "pentaho/modules": {
-      
-      "@my/bar/Model": {
+      "./Model": {
         "base": "pentaho/visual/base/Model",
-        "i18n": true,
-        "ui": "@my/bar/Model.ui" // <=> true
-      },
-
-      "@my/bar/View": {
-        "base": "pentaho/visual/base/IView",
-        "props": {
-          "model": {"valueType": "@my/base/Model"}
+        "info": true, // "./Module.info",
+        "config": {
+          "defaultView": "./View",
         }
       },
-
-      "@my/bar/config": {
-        "type": "pentaho/config/spec/IRuleSet"
+      "pentaho/theme!./Model": {
+        "config": {
+          "main": "./themes/ruby/Model"
+        }
+      },
+      "pentaho/theme!./View": {
+        "config": {
+          "main": "./themes/ruby/View"
+        }
       }
     }
   }

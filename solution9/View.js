@@ -11,9 +11,9 @@ define([
     },
 
     _updateAll: function() {
-      this.domContainer.innerText = bundle.structured.helloText;
+      this.domContainer.innerText = this.$type.messages.helloText;
     }
   })
-  .localize(bundle)
+  .localize({$type: bundle.structured})
   .configure();
 });

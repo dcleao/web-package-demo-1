@@ -1,8 +1,8 @@
 
-.my-bar-Model-header.component-icon-small {
+.my-bar-Model-info.component-icon-small {
   background-image: url("./images/icon-small.png");
 }
 
-.my-bar-Model-header.component-icon-placeholder {
+.my-bar-Model-info.component-icon-placeholder {
   background-image: url("./images/icon-placeholder.png");
 }

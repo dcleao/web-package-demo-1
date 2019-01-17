@@ -1,0 +1,37 @@
+{
+  "name": "@my/bar",
+  "version": "1.0.0",
+  "dependencies": {
+    "@hitachivantara/pentaho-core": "1.0.0",
+    "@hitachivantara/pentaho-visual": "1.0.0"
+  },
+  "paths": {
+    "my/bar": "/"
+  },
+  "config": {
+    "pentaho/modules": {
+      "./Model": {
+        "base": "pentaho/visual/base/Model",
+        "annotations": {
+          "pentaho/module/LoadUIInfo": true,
+          "pentaho/i18n/LoadConfig": true,
+          "pentaho/visual/DefaultView": true
+        }
+      },
+      "./Model.info": {
+        "annotations": {
+          "pentaho/i18n/LoadConfig": true
+        }
+      },
+      "./View": {
+        "annotations": {
+          "pentaho/i18n/LoadConfig": true,
+          "pentaho/theme/LoadTheme": true
+        }
+      },
+      "./config": {
+        "type": "pentaho/config/spec/IRuleSet"
+      }
+    }
+  }
+}
